@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pri: {
+              500: "#da373d",
+            },
+            sec: {
+              100: "#f1f1f1",
+              200: "#ccc",
+              300: "#777",
+              400: "#333",
+              800: "#211F1D"
+            },
+            white: "#fff",
+            green: "#3FDBA9",
+            blue: "#385CC4",
+            yellow: "#FFB13C",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body>
+  <div class="flex h-screen overflow-y-hidden">
+    <div class="w-60 bg-sec-800 p-4 text-white">
+      <h2 class="text-2xl py-2 mb-5 font-bold text-center ">My Dashboard</h2>
+      <div class="flex flex-col justify-between" style="height: calc(100vh - 100px);">
+        <div>
+          <div class="flex items-center gap-2 p-2 hover:bg-pri-500 cursor-pointer rounded-md">
+            <i class="ri-dashboard-line text-lg"></i>
+            <p>Painel de Controle</p>
+          </div>
+          <div class="flex items-center gap-2 p-2 hover:bg-pri-500 cursor-pointer rounded-md">
+            <i class="ri-pie-chart-line text-lg"></i>
+            <p>Projetos</p>
+          </div>
+          <div class="flex items-center gap-2 p-2 bg-pri-500 cursor-pointer rounded-md">
+            <i class="ri-file-list-2-line text-lg"></i>
+            <p>Lista de Tarefas</p>
+          </div>
+          <div class="flex items-center gap-2 p-2 hover:bg-pri-500 cursor-pointer rounded-md">
+            <i class="ri-expand-left-right-line text-lg"></i>
+            <p>Serviços</p>
+          </div>
+          <div class="flex items-center gap-2 p-2 hover:bg-pri-500 cursor-pointer rounded-md">
+            <i class="ri-notification-3-line text-lg"></i>
+            <p>Notificações</p>
+          </div>
+          <div class="flex items-center gap-2 p-2 hover:bg-pri-500 cursor-pointer rounded-md">
+            <i class="ri-question-line text-lg"></i>
+            <p>Ajuda</p>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 p-2 hover:bg-pri-500 cursor-pointer rounded-md">
+            <i class="ri-settings-3-line"></i>
+            <p>Configurações</p>
+          </div>
+          <div class="flex items-center gap-2 p-2 hover:bg-pri-500 cursor-pointer rounded-md">
+            <i class="ri-logout-box-line text-lg"></i>
+            <p>Sair</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full bg-sec-200">
+      <div class="p-4 flex items-center justify-between bg-white">
+        <div class="  flex items-center gap-3">
+          <div class="relative h-10 w-10 rounded-full overflow-hidden">
+            <img src="./avatar.png" class="absolute top-0 left-0 w-full h-full object-cover" />
+          </div>
+          <div>
+            <h3 class="text-xl text-sec-400">Lucas Fernandes Guanabara</h3>
+            <p class="text-sec-300 -mt-2">Desenvolvedor</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-5">
+          <div class="bg-sec-100 py-2 px-5 rounded-md mr-24"><input class="bg-inherit outline-none w-96"
+              placeholder="Pesquisar qualquer coisa..." /> </div>
+          <div class="bg-sec-100 h-10 w-10 rounded-full flex items-center justify-center"><i
+              class="ri-notification-line"></i></div>
+          <div class="bg-sec-100 h-10 w-10 rounded-full flex items-center justify-center"><i
+              class="ri-message-2-line"></i></i></div>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 p-4 gap-4 items-start">
+        <div class="col-span-2 bg-white rounded-md overflow-hidden">
+          <div>
+            <div class="flex items-center justify-between p-4 ">
+              <div>
+                <h2 class="text-3xl font-semibold text-sec-400">
+                  Últimas Tarefas
+                </h2>
+                <p class="text-sec-300">
+                  <span class="font-semibold text-sec-400">51 no total, </span> prossiga para resolvê-las
+                </p>
+              </div>
+              <div class="flex items-center gap-10">
+                <div class="text-center">
+                  <h2 class="text-3xl font-semibold text-sec-400">45</h2>
+                  <p class="text-sec-300">Concluídas</p>
+                </div>
+                <div class="text-center">
+                  <h2 class="text-3xl font-semibold text-sec-400">6</h2>
+                  <p class="text-sec-300">Em progresso</p>
+                </div>
+              </div>
+            </div>
+            <div class=" overflow-y-scroll px-4" style="height: calc(100vh - 200px);">
+              <table class="w-full text-right">
+                <thead class="text-sec-400">
+                  <tr class="border-b">
+                    <th class="text-left">Nome da Tarefa</th>
+                    <th>Supervisor</th>
+                    <th>Participantes</th>
+                    <th>Status</th>
+                    <th>Data de Conclusão</th>
+                  </tr>
+                </thead>
+                <tbody class="text-sec-300 ">
+                  <tr class="h-10 hover:bg-pri-500 hover:text-white">
+                    <td class="text-left ">Gerenciamento de Estado</td>
+                    <td>
+                      Julio
+                      <i class="ri-message-2-line text-green"></i>
+                      </span>
+                    </td>
+                    <td>3</td>
+                    <td class="text-green">Concluído</td>
+                    <td>25/05/2024</td>
+                  </tr>
+                  <tr class="h-10 hover:bg-pri-500 hover:text-white">
+                    <td class="text-left">Melhorar responsividade da pagina</td>
+                    <td>
+                      Joao
+                      <i class="ri-message-2-line text-green"></i>
+                      </span>
+                    </td>
+                    <td>3</td>
+                    <td class="text-blue">Em Progresso</td>
+                    <td>25/05/2024</td>
+                  </tr>
+                  <tr class="h-10 bg-pri-500 text-white">
+                    <td class="text-left">Consumir API</td>
+                    <td>
+                      Julio
+                      <i class="ri-message-2-line text-green"></i>
+                      </span>
+                    </td>
+                    <td>2</td>
+                    <td>A Fazer</td>
+                    <td>29/05/2024</td>
+                  </tr>
+                  <tr class="h-10 hover:bg-pri-500 hover:text-white">
+                    <td class="text-left">Mudar cores do website</td>
+                    <td>
+                      Lucas
+                      <i class="ri-message-2-line text-green"></i>
+                      </span>
+                    </td>
+                    <td>6</td>
+                    <td class="text-blue">Em Progresso</td>
+                    <td>31/05/2024</td>
+                  </tr>
+                  <tr class="h-10 hover:bg-pri-500 hover:text-white">
+                    <td class="text-left">Integração de Produto Único</td>
+                    <td>
+                      J.S Joao
+                      <i class="ri-message-2-line text-green"></i>
+                      </span>
+                    </td>
+                    <td>2</td>
+                    <td class="text-green">Concluído</td>
+                    <td>02/06/2024</td>
+                  </tr>
+                  <tr class="h-10 hover:bg-pri-500 hover:text-white">
+                    <td class="text-left">Design da Página Sobre Nós</td>
+                    <td>
+                      Julio
+                      <i class="ri-message-2-line text-green"></i>
+                      </span>
+                    </td>
+                    <td>3</td>
+                    <td class="text-blue">Em Progresso</td>
